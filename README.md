@@ -28,19 +28,3 @@ A real-time computer vision analysis system providing combat information extract
 ## License
 
 [MIT License](LICENSE)
-.
-├── src/
-│   ├── capture/     # Screen capture components
-│   ├── vision/      # Computer vision pipeline
-│   ├── ai/          # AI model and training
-│   ├── overlay/     # UI and overlay system
-│   ├── utils/       # Shared utilities
-│   └── tests/       # Test suites
-├── data/
-│   ├── training/    # Training datasets
-│   ├── models/      # Trained models
-│   └── configs/     # Configuration files
-├── docs/            # Documentation
-└── scripts/         # Build and automation scripts
-
-
