@@ -1,0 +1,165 @@
+WoW AI Combat Analysis Overlay - Master Plan
+==========================================
+
+1. PROJECT FOUNDATION
+-------------------
+A. Overview
+   - Windows overlay application for WoW
+   - Real-time computer vision analysis
+   - Unit tracking and combat information extraction
+   - Performance-optimized processing pipeline
+
+B. Core Technical Components
+   - Screen capture system
+   - Computer vision pipeline
+   - AI model architecture
+   - Data processing system
+   - Overlay interface
+
+2. DEVELOPMENT RESOURCES
+----------------------
+A. World of Warcraft Resources
+   - WoW API Documentation: https://wowpedia.fandom.com/wiki/World_of_Warcraft_API
+   - Combat Log Format: https://wowpedia.fandom.com/wiki/COMBAT_LOG_EVENT
+   - AddOn Development Guide: https://wowpedia.fandom.com/wiki/Getting_started_with_writing_addons
+   - UI Customization Framework
+
+B. Computer Vision/AI Resources
+   - OpenCV Documentation: https://docs.opencv.org/
+   - PyTorch Vision: https://pytorch.org/vision/
+   - TensorFlow Object Detection: https://tensorflow.org/api_docs/python/tf/image
+   - YOLO Real-time Object Detection
+   - MediaPipe for pose estimation
+
+C. Windows Development
+   - Windows Graphics Capture API
+   - DirectX Documentation
+   - Win32 Overlay Examples
+   - Performance Profiling Tools
+
+3. IMPLEMENTATION PHASES
+----------------------
+Phase 1: Foundation
+   - Development environment setup
+   - Basic screen capture implementation
+   - Simple overlay window
+   - Initial CV pipeline
+
+Phase 2: AI Development
+   - Training data collection system
+   - Model architecture design
+   - Basic unit detection
+   - Verification system implementation
+
+Phase 3: Feature Enhancement
+   - Combat analysis
+   - Movement tracking
+   - UI refinement
+   - Performance optimization
+
+4. AI MODEL STRUCTURE
+-------------------
+A. Detection Components
+   - Unit identification
+   - Health/resource tracking
+   - Combat state analysis
+   - Movement prediction
+
+B. Reward System
+   High Priority (1.0x):
+   - Basic unit detection
+   - Health/resource reading
+   - Combat state detection
+
+   Medium Priority (0.7x):
+   - Movement tracking
+   - Position analysis
+   - Frame consistency
+
+   Low Priority (0.4x):
+   - Pattern recognition
+   - Tactical analysis
+   - Optimization
+
+5. VERIFICATION SYSTEM
+--------------------
+A. Manual Verification
+   - Training data labeling
+   - Ground truth dataset creation
+   - Cross-reference with game API
+
+B. Automated Verification
+   - Pixel pattern matching
+   - Temporal consistency
+   - Context validation
+   - Physics verification
+
+6. TECHNICAL REQUIREMENTS
+-----------------------
+A. Development Stack
+   - Python/C++ for core logic
+   - OpenCV for image processing
+   - PyTorch/TensorFlow for AI
+   - DirectX for overlay
+   - SQLite for data storage
+
+B. Performance Targets
+   - <16ms frame processing
+   - <5% CPU usage
+   - <2GB memory footprint
+   - >95% detection accuracy
+
+7. QUALITY ASSURANCE
+------------------
+A. Testing Framework
+   - Unit testing suite
+   - Performance benchmarks
+   - Accuracy metrics
+   - Error logging system
+
+B. Validation Methods
+   - Cross-reference verification
+   - Human validation pipeline
+   - Automated testing
+   - Performance monitoring
+
+8. ADDITIONAL RESOURCES
+---------------------
+A. Learning Resources
+   - Deep Learning for Computer Vision (Stanford CS231n)
+   - Real-time Object Detection Papers
+   - Game Overlay Development Guides
+   - WoW AddOn Development Community
+
+B. Tools and Libraries
+   - NumPy for numerical processing
+   - Pandas for data analysis
+   - PIL for image processing
+   - CUDA for GPU acceleration
+   - Visual Studio for development
+
+C. Community Resources
+   - WoW Developer Discord
+   - Computer Vision Forums
+   - Game Overlay Communities
+   - AI Research Papers
+
+9. NEXT STEPS
+------------
+1. Environment Setup
+   - Install development tools
+   - Configure GPU support
+   - Set up version control
+   - Create project structure
+
+2. Prototype Development
+   - Basic screen capture
+   - Simple overlay window
+   - Initial CV pipeline
+   - Data collection system
+
+3. Begin AI Development
+   - Create training dataset
+   - Design model architecture
+   - Implement basic detection
+   - Set up verification system 

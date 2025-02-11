@@ -1,0 +1,185 @@
+WoW AI Overlay - Development Best Practices
+=========================================
+
+1. PROJECT INFRASTRUCTURE
+-----------------------
+A. Repository Structure
+   /src
+     /capture      # Screen capture components
+     /vision       # Computer vision pipeline
+     /ai           # AI model and training
+     /overlay      # UI and overlay system
+     /utils        # Shared utilities
+     /tests        # Test suites
+   /data
+     /training     # Training datasets
+     /models       # Trained models
+     /configs      # Configuration files
+   /docs          # Documentation
+   /scripts       # Build and automation scripts
+
+B. Version Control
+   - Use semantic versioning (MAJOR.MINOR.PATCH)
+   - Branch naming:
+     * feature/description
+     * bugfix/description
+     * release/version
+   - Commit messages should reference issues/tickets
+   - Tag all model versions and training datasets
+
+2. CODE ORGANIZATION
+------------------
+A. Python Best Practices
+   - Type hints for all function parameters
+   - Docstring documentation (Google style)
+   - Maximum line length: 88 characters (Black formatter)
+   - Use dataclasses for data structures
+   - Async operations for I/O-bound tasks
+
+B. Performance Optimization
+   - Use NumPy vectorization where possible
+   - Implement GPU acceleration for CV/AI
+   - Buffer screen captures efficiently
+   - Minimize garbage collection impact
+   - Profile critical paths regularly
+
+3. AI MODEL DEVELOPMENT
+---------------------
+A. Training Data Management
+   - Version control for datasets
+   - Clear labeling conventions
+   - Data augmentation pipeline
+   - Validation/test set separation
+   - Regular dataset cleanup
+
+B. Model Architecture
+   - Modular component design
+   - Clear input/output interfaces
+   - Batch processing support
+   - Quantization-ready structure
+   - Checkpoint system
+
+C. Training Pipeline
+   - Reproducible training scripts
+   - Automated validation
+   - Performance metrics logging
+   - Resource utilization monitoring
+   - Early stopping implementation
+
+4. TESTING FRAMEWORK
+------------------
+A. Unit Tests
+   - Test each component in isolation
+   - Mock external dependencies
+   - Coverage > 80% for critical paths
+   - Performance regression tests
+   - GPU/CPU compatibility tests
+
+B. Integration Tests
+   - End-to-end workflow testing
+   - Cross-component interaction
+   - Resource leak detection
+   - Error handling verification
+   - State management validation
+
+C. AI Model Testing
+   - Accuracy benchmarks
+   - Performance benchmarks
+   - Edge case validation
+   - Model regression testing
+   - Inference speed testing
+
+5. MONITORING AND LOGGING
+-----------------------
+A. Application Metrics
+   - Frame processing time
+   - Memory usage
+   - CPU/GPU utilization
+   - Model inference speed
+   - Detection accuracy
+
+B. Logging System
+   - Structured logging format
+   - Log levels (DEBUG, INFO, WARNING, ERROR)
+   - Performance logging
+   - Error tracing
+   - Model prediction logging
+
+6. SECURITY CONSIDERATIONS
+------------------------
+A. Data Protection
+   - Secure storage of training data
+   - Model weight encryption
+   - Configuration file security
+   - User data privacy
+
+B. Application Security
+   - Input validation
+   - Error handling
+   - Resource limits
+   - Access control
+   - Update mechanism
+
+7. DEPLOYMENT PRACTICES
+---------------------
+A. Release Process
+   - Automated build process
+   - Version tagging
+   - Changelog maintenance
+   - Release testing checklist
+   - Rollback procedures
+
+B. Distribution
+   - Package dependencies
+   - Environment setup script
+   - Configuration management
+   - Update distribution
+   - Installation verification
+
+8. DOCUMENTATION
+--------------
+A. Code Documentation
+   - Inline comments for complex logic
+   - Function/class documentation
+   - Architecture diagrams
+   - API documentation
+   - Example usage
+
+B. User Documentation
+   - Installation guide
+   - Configuration guide
+   - Troubleshooting guide
+   - Performance tuning
+   - FAQ maintenance
+
+9. AUTOMATION
+-----------
+A. CI/CD Pipeline
+   - Automated testing
+   - Code quality checks
+   - Build verification
+   - Documentation generation
+   - Release packaging
+
+B. Development Automation
+   - Code formatting
+   - Import sorting
+   - Type checking
+   - Dependency updates
+   - Security scanning
+
+10. PERFORMANCE GUIDELINES
+------------------------
+A. Real-time Processing
+   - Maximum frame processing time: 16ms
+   - Batch processing where applicable
+   - Memory pooling for buffers
+   - Thread management
+   - Resource scheduling
+
+B. Resource Usage
+   - Memory limits per component
+   - CPU usage optimization
+   - GPU memory management
+   - I/O operation batching
+   - Cache utilization 
