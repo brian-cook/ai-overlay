@@ -1,5 +1,5 @@
-WoW AI Overlay - Development Best Practices
-=========================================
+AI Overlay - Development Best Practices
+=====================================
 
 1. PROJECT INFRASTRUCTURE
 -----------------------
@@ -182,4 +182,73 @@ B. Resource Usage
    - CPU usage optimization
    - GPU memory management
    - I/O operation batching
-   - Cache utilization 
+   - Cache utilization
+
+11. MODERN AI BEST PRACTICES
+--------------------------
+A. Model Architecture
+   - Use transformer-based architectures for complex pattern recognition
+   - Implement attention mechanisms for focused feature extraction
+   - Consider lightweight models (MobileNet, EfficientNet) for real-time inference
+   - Use model distillation for faster inference
+   - Implement dynamic batching for efficient GPU utilization
+
+B. Training Strategies
+   - Use mixed precision training (FP16/BF16) for faster training
+   - Implement gradient accumulation for large models
+   - Use learning rate scheduling (OneCycleLR, cosine annealing)
+   - Implement curriculum learning for complex tasks
+   - Use data augmentation strategies (RandAugment, AugMix)
+
+C. Optimization Techniques
+   - Model quantization (INT8, dynamic quantization)
+   - Model pruning for smaller footprint
+   - Knowledge distillation for faster inference
+   - ONNX Runtime optimization
+   - TensorRT acceleration where applicable
+
+12. PERFORMANCE OPTIMIZATION
+-------------------------
+A. GPU Optimization
+   - Use CUDA streams for parallel processing
+   - Implement memory pinning for faster GPU transfers
+   - Optimize tensor memory layout (channels_last format)
+   - Use torch.compile() for PyTorch 2.0+ optimization
+   - Implement async data loading with GPU prefetch
+
+B. Memory Management
+   - Use gradient checkpointing for large models
+   - Implement smart batching based on GPU memory
+   - Use memory-efficient attention implementations
+   - Implement proper cleanup of CUDA cache
+   - Monitor and optimize GPU memory fragmentation
+
+C. Real-time Processing
+   - Use threading for parallel frame processing
+   - Implement frame skipping for consistent FPS
+   - Use double buffering for smooth display
+   - Implement adaptive quality scaling
+   - Profile and optimize critical paths
+
+13. CODE OPTIMIZATION
+-------------------
+A. Python Performance
+   - Use Numba for CPU-intensive operations
+   - Implement vectorized operations with NumPy
+   - Use PyTorch JIT scripting for critical paths
+   - Minimize Python object creation in loops
+   - Use proper data structures (sets for lookups)
+
+B. Memory Efficiency
+   - Use generators for large data processing
+   - Implement proper garbage collection
+   - Use memory mapping for large files
+   - Optimize object lifecycle management
+   - Monitor memory leaks
+
+C. Threading and Async
+   - Use asyncio for I/O operations
+   - Implement thread pools for CPU tasks
+   - Use proper locking mechanisms
+   - Implement cooperative multitasking
+   - Profile thread contention 
