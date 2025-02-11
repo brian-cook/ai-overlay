@@ -28,5 +28,3 @@ A real-time computer vision analysis system providing combat information extract
 ## License
 
 [MIT License](LICENSE)
-
-## Disclaimer
